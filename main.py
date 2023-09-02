@@ -9,13 +9,6 @@ import pickle
 # creating the flask app
 app = Flask(__name__)
 
-# Neo4j database connection parameters
-uri = "bolt://127.0.0.1:7687"
-username = "neo4j"
-password = "Sunny1758#"
-driver = GraphDatabase.driver(uri, auth=(username, password), encrypted=False)
-
-
 with open('graph_data.pkl', 'rb') as f:
     loaded_data = pickle.load(f)
 
