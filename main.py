@@ -7,7 +7,7 @@ import h5py
 import pickle
 
 # creating the flask app
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 with open('graph_data.pkl', 'rb') as f:
     loaded_data = pickle.load(f)
